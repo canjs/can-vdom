@@ -1,0 +1,32 @@
+{
+  "name": "can-vdom",
+  "version": "0.0.1",
+  "description": "A VDOM implementation for CanJS",
+  "main": "vdom.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublish": "node build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/canjs/can-vdom.git"
+  },
+  "author": "Bitovi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/canjs/can-vdom/issues"
+  },
+  "homepage": "https://github.com/canjs/can-vdom",
+  "dependencies": {
+    "can-simple-dom": "^0.2.3"
+  },
+  "system": {
+    "main": "vdom",
+    "map": {
+      "can-simple-dom/can-simple-dom": "can-simple-dom"
+    }
+  },
+  "devDependencies": {
+    "steal-tools": "^0.10.4"
+  }
+}
