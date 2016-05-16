@@ -1,6 +1,6 @@
 {
   "name": "can-vdom",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A browser-lite environment for nodejs",
   "homepage": "http://canjs.com",
   "repository": {
