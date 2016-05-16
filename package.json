@@ -1,32 +1,88 @@
 {
   "name": "can-vdom",
-  "version": "0.0.1",
-  "description": "A VDOM implementation for CanJS",
-  "main": "vdom.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "prepublish": "node build"
-  },
+  "version": "0.0.0",
+  "description": "A browser-lite environment for nodejs",
+  "homepage": "http://canjs.com",
   "repository": {
     "type": "git",
-    "url": "https://github.com/canjs/can-vdom.git"
+    "url": "git://github.com/canjs/can-vdom.git"
   },
-  "author": "Bitovi",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/canjs/can-vdom/issues"
+  "author": {
+    "name": "Bitovi",
+    "email": "contact@bitovi.com",
+    "url": "http://bitovi.com"
   },
-  "homepage": "https://github.com/canjs/can-vdom",
-  "dependencies": {
-    "can-simple-dom": "^0.2.3"
+  "scripts": {
+    "preversion": "npm test && npm run build",
+    "version": "git commit -am \"Update dist for release\" && git checkout -b release && git add -f dist/",
+    "postversion": "git push --tags && git checkout master && git branch -D release && git push",
+    "testee": "testee test/test.html --browsers firefox",
+    "test:node": "mocha test/test.js",
+    "test:browser": "testee test/test.html --browsers firefox --reporter Spec",
+    "test": "npm run test:node && npm run test:browser",
+    "jshint": "jshint ./*.js --config",
+    "release:patch": "npm version patch && npm publish",
+    "release:minor": "npm version minor && npm publish",
+    "release:major": "npm version major && npm publish",
+    "build": "node build.js",
+    "document": "documentjs",
+    "develop": "done-serve --static --develop --port 8080"
   },
+  "main": "dist/cjs/can-vdom",
+  "browser": {
+    "transform": [
+      "cssify"
+    ]
+  },
+  "browserify": {
+    "transform": [
+      "cssify"
+    ]
+  },
+  "keywords": [
+    "donejs",
+    "canjs"
+  ],
   "system": {
-    "main": "vdom",
+    "main": "can-vdom",
+    "configDependencies": [
+      "live-reload"
+    ],
+    "npmIgnore": [
+      "documentjs",
+      "testee",
+      "generator-donejs",
+      "donejs-cli",
+      "steal-tools"
+    ],
+    "npmAlgorithm": "flat",
     "map": {
-      "can-simple-dom/can-simple-dom": "can-simple-dom"
+      "./assert": "chai/chai"
+    },
+    "meta": {
+      "chai/chai": {
+        "format": "global",
+        "exports": "chai.assert"
+      }
     }
   },
+  "dependencies": {
+    "can-util": "^3.0.0-pre.17",
+    "can-simple-dom": "^0.3.0",
+    "can-view-parser": "^3.0.0-pre.2"
+  },
   "devDependencies": {
-    "steal-tools": "^0.10.4"
+    "documentjs": "^0.4.2",
+    "jshint": "^2.9.1",
+    "cssify": "^0.6.0",
+    "steal": "^0.16.0",
+    "steal-tools": "^0.16.0",
+    "testee": "^0.2.4",
+    "generator-donejs": "^0.9.0",
+    "donejs-cli": "^0.9.4",
+    "done-serve": "^0.2.0",
+    "chai": "^3.4.1",
+    "mocha": "^2.3.4",
+    "steal-mocha": "0.0.3"
   }
 }
