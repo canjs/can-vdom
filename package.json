@@ -28,7 +28,7 @@
     "document": "documentjs",
     "develop": "done-serve --static --develop --port 8080"
   },
-  "main": "dist/cjs/can-vdom",
+  "main": "can-vdom.js",
   "browser": {
     "transform": [
       "cssify"
