@@ -2,8 +2,8 @@ var makeDocument = require("../make-document/make-document");
 
 var noop = function(){};
 
-module.exports = function(){
-	var global = {};
+module.exports = function(global){
+	global = global || {};
 	global.document = makeDocument();
 	global.window = global;
 	global.addEventListener = function(){};
