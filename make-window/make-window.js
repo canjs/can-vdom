@@ -1,4 +1,6 @@
-var makeDocument = reuire("../make-document/make-document");
+var makeDocument = require("../make-document/make-document");
+
+var noop = function(){};
 
 module.exports = function(){
 	var global = {};
@@ -25,8 +27,8 @@ module.exports = function(){
 		hash: ''
 	};
 	global.history = {
-		pushState: can.k,
-		replaceState: can.k
+		pushState: noop,
+		replaceState: noop
 	};
 	return global;
 };
