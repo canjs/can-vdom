@@ -21,18 +21,9 @@ if(isNode) {
 	var nodeRequire = require;
 
 	describe("can-vdom", function(){
-		function deleteWindow(){
-			delete global.window;
-		}
-
-		beforeEach(deleteWindow);
-		afterEach(deleteWindow);
+		nodeRequire("../can-vdom");
 
 		it("creates a global window", function(){
-			assert.equal(global.window, undefined, "There is no global window");
-
-			nodeRequire("../can-vdom");
-
 			[
 				"window",
 				"navigator",
@@ -43,6 +34,11 @@ if(isNode) {
 			function assertExists(prop){
 				assert.ok(global[prop], prop + " now exists");
 			}
+		});
+
+		it("contains normal globals like setTimeout", function(){
+			assert.equal(typeof window.setTimeout, "function", "setTimeout included");
+			assert.equal(typeof window.Math, "object", "Math included");
 		});
 	});
 }
