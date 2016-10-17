@@ -2,6 +2,7 @@
 @parent can-ecosystem
 @group can-vdom.modules modules
 @group can-vdom.types types
+@package ./package.json
 @description
 
 A browser-lite environment for Node.js.
