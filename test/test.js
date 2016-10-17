@@ -28,7 +28,8 @@ if(isNode) {
 				"window",
 				"navigator",
 				"location",
-				"history"
+				"history",
+				"self"
 			].forEach(assertExists);
 
 			function assertExists(prop){

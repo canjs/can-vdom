@@ -5,7 +5,7 @@ var noop = function(){};
 module.exports = function(global){
 	global = global || {};
 	global.document = makeDocument();
-	global.window = global;
+	global.window = global.self = global;
 	global.addEventListener = function(){};
 	global.removeEventListener = function(){};
 	global.navigator = {
