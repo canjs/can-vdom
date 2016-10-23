@@ -6,7 +6,16 @@
  *
  * @signature `makeDocument()`
  *
- * Creates a new simple document using [can-simple-dom]. Provides light-weight document needs, mostly for server-side rendering.
+ *
+ * Creates a new simple document using [can-simple-dom]. Provides light-weight document needs,
+ * mostly for server-side rendering.
+ *
+ * ```js
+ * var makeDocument = require("can-vdom/make-document/make-document");
+ * var document = makeDocument();
+ *
+ * document.body //-> Node
+ * ```
  *
  * @return {can-simple-dom/document/document} A can-simple-dom document.
  *

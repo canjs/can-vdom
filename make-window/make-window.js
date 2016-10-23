@@ -6,7 +6,15 @@
  *
  * @signature `makeWindow()`
  *
- * Creates a document and places it, along with other common browser globals, on a new object and then returns that object.
+ * Creates a document and places it, along with other common browser globals,
+ * on a new object and then returns that object.
+ *
+ * ```js
+ * var makeWindow = require("can-vdom/make-window/make-window");
+ * makeWindow();
+ *
+ * window.document.body //-> Node
+ * ```
  *
  * @return {can-vdom.types.window} An object with common browser globals.
  *

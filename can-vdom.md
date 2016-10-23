@@ -1,11 +1,16 @@
-@module {{}} can-vdom
+@module {undefined} can-vdom
 @parent can-ecosystem
 @group can-vdom.modules modules
 @group can-vdom.types types
 @package ./package.json
-@description
+@description A browser-lite environment for Node.js or a worker thread.
 
-A browser-lite environment for Node.js.
+@type {undefined}
+
+The `can-vdom` module does not export anything, but it changes the current
+environment to have the limited subset of browser environment behavior and
+functionality needed to support CanJS templates and other behavior without
+a native DOM.
 
 ```js
 require("can-vdom");
@@ -15,13 +20,20 @@ window === global; // true
 document.getElementsByTagName("body"); // [HTMLBodyElement]
 ```
 
+`can-vdom` decorates the environment `global` to include:
+
+ - a non-functional `navigator`, `location`, and `history` object.
+ - a limitedly functional `document` with basic `Node` behavior, event binding and dispatching.
+
+
+
 @body
 
-**can-vdom** is what enables CanJS apps to run in the server. It provides a lite weight browser-like environment with a `document` and `window`. This allows code written for the browser, without extreme requirements, to also run on the server.
 
-# Shiming a browser environment
 
-Importing can-vdom will shim a browser-like environment into Node's globals. Use this approach to run code that expects a global `window` and/or `document` object.
+## Shiming a browser environment
+
+Importing `can-vdom` will shim a browser-like environment into Node's globals. Use this approach to run code that expects a global `window` and/or `document` object.
 
 ```js
 require("can-vdom");
@@ -33,7 +45,7 @@ typeof window.addEventListener; // "function"
 document.getElementById("foo"); // undefined
 ```
 
-# Loading as a module
+## Loading as a module
 
 If you want to prevent setting globals you can load `can-vdom/make-window/make-window` directly:
 
