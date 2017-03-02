@@ -44,7 +44,10 @@
         "format": "global",
         "exports": "chai.assert"
       }
-    }
+    },
+    "plugins": [
+      "chai"
+    ]
   },
   "dependencies": {
     "can-util": "^3.0.0-pre.17",
@@ -60,7 +63,7 @@
     "jshint": "^2.9.1",
     "mocha": "^2.3.4",
     "steal": "^1.2.10",
-    "steal-mocha": "0.0.3",
+    "steal-mocha": "^1.0.0",
     "steal-tools": "^1.1.2",
     "testee": "^0.3.1"
   },
