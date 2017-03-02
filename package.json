@@ -34,9 +34,8 @@
     "donejs",
     "canjs"
   ],
-  "system": {
+  "steal": {
     "main": "can-vdom",
-    "npmAlgorithm": "flat",
     "map": {
       "./assert": "chai/chai"
     },
@@ -45,7 +44,10 @@
         "format": "global",
         "exports": "chai.assert"
       }
-    }
+    },
+    "plugins": [
+      "chai"
+    ]
   },
   "dependencies": {
     "can-util": "^3.0.0-pre.17",
@@ -54,16 +56,16 @@
   },
   "devDependencies": {
     "bit-docs": "0.0.7",
-    "jshint": "^2.9.1",
-    "steal": "^0.16.0",
-    "steal-tools": "^0.16.0",
-    "testee": "^0.2.4",
-    "generator-donejs": "^0.9.0",
-    "donejs-cli": "^0.9.4",
-    "done-serve": "^0.2.0",
     "chai": "^3.4.1",
+    "done-serve": "^0.2.0",
+    "donejs-cli": "^0.9.4",
+    "generator-donejs": "^0.9.0",
+    "jshint": "^2.9.1",
     "mocha": "^2.3.4",
-    "steal-mocha": "0.0.3"
+    "steal": "^1.2.10",
+    "steal-mocha": "^1.0.0",
+    "steal-tools": "^1.1.2",
+    "testee": "^0.3.1"
   },
   "bit-docs": {
     "dependencies": {
