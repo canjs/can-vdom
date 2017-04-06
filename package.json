@@ -50,9 +50,9 @@
     ]
   },
   "dependencies": {
-    "can-util": "^3.0.0-pre.17",
-    "can-simple-dom": "^0.4.0",
-    "can-view-parser": "^3.0.0-pre.2"
+    "can-util": "^3.0.0",
+    "can-simple-dom": "^1.0.0",
+    "can-view-parser": "^3.0.0"
   },
   "devDependencies": {
     "bit-docs": "0.0.7",
