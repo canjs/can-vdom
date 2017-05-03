@@ -1,5 +1,7 @@
 # can-vdom
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/canjs/can-vdom.svg)](https://greenkeeper.io/)
+
 [![Build Status](https://travis-ci.org/canjs/can-vdom.png?branch=master)](https://travis-ci.org/canjs/can-vdom)
 
 A browser-lite environment for nodejs
