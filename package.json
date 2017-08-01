@@ -26,8 +26,7 @@
     "release:minor": "npm version minor && npm publish",
     "release:major": "npm version major && npm publish",
     "build": "node build.js",
-    "document": "bit-docs",
-    "develop": "done-serve --static --develop --port 8080"
+    "document": "bit-docs"
   },
   "main": "can-vdom.js",
   "keywords": [
@@ -51,21 +50,18 @@
   },
   "dependencies": {
     "can-simple-dom": "^1.1.0",
-    "can-util": "^3.9.0-pre.4",
-    "can-view-parser": "^3.4.0-pre.0"
+    "can-util": "^3.10.0-pre.0",
+    "can-view-parser": "^3.5.0-pre.0"
   },
   "devDependencies": {
     "bit-docs": "0.0.7",
     "chai": "^3.4.1",
-    "done-serve": "^0.2.0",
-    "donejs-cli": "^0.9.4",
-    "generator-donejs": "^0.9.0",
     "jshint": "^2.9.1",
     "mocha": "^2.3.4",
     "steal": "^1.2.10",
     "steal-mocha": "^1.0.0",
     "steal-tools": "^1.1.2",
-    "testee": "^0.3.1"
+    "testee": "^0.7.0"
   },
   "bit-docs": {
     "dependencies": {
