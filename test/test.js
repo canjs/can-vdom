@@ -43,6 +43,11 @@ if(isNode) {
 			assert.equal(typeof window.Math, "object", "Math included");
 		});
 
+		it('getComputedStyle returns the node style', function () {
+			var fakeNode = {style: 1};
+			assert.equal(window.getComputedStyle(fakeNode), 1, 'getComputedStyle returns node style');
+		});
+
 		it("Node exposes the nodeType constants", function(){
 			assert.equal(window.Node.ELEMENT_NODE, 1, "has the element nodeType");
 			assert.equal(window.Node.TEXT_NODE, 3, "has the text nodeType");
