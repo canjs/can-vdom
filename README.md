@@ -1,134 +1,28 @@
 # can-vdom
 
-[![Build Status](https://travis-ci.org/canjs/can-vdom.png?branch=master)](https://travis-ci.org/canjs/can-vdom)
+[![Join the chat at https://gitter.im/canjs/canjs](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/canjs/canjs?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/canjs/can-vdom/blob/master/LICENSE.md)
+[![npm version](https://badge.fury.io/js/can-vdom.svg)](https://www.npmjs.com/package/can-vdom)
+[![Travis build status](https://travis-ci.org/canjs/can-vdom.svg?branch=master)](https://travis-ci.org/canjs/can-vdom)
+[![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/canjs/can-vdom?branch=master&svg=true)](https://ci.appveyor.com/project/matthewp/can-vdom)
+[![Coverage status](https://coveralls.io/repos/github/canjs/can-vdom/badge.svg?branch=master)](https://coveralls.io/github/canjs/can-vdom?branch=master)
+[![Greenkeeper badge](https://badges.greenkeeper.io/canjs/can-vdom.svg)](https://greenkeeper.io/)
 
-A browser-lite environment for nodejs
+FAILED TO GET DESCRIPTION
 
-- <code>[__can-vdom__ Object](#can-vdom-object)</code>
-  - _modules_
-    - <code>[__can-vdom/make-window/make-window__ function](#can-vdommake-windowmake-window-function)</code>
-      - <code>[makeWindow()](#makewindow)</code>
-      - <code>[makeWindow(global)](#makewindowglobal)</code>
-    - <code>[__can-vdom/make-document/make-document__ function](#can-vdommake-documentmake-document-function)</code>
-      - <code>[makeDocument()](#makedocument)</code>
-  - _types_
-    - <code>[window Object](#window-object)</code>
+## Documentation
 
-## API
+Read the [API docs on CanJS.com](https://canjs.com/doc/can-vdom.html).
 
-##  `{Object}`
+## Changelog
 
- 
-A browser-lite environment for Node.js.
+See the [latest releases on GitHub](https://github.com/canjs/can-vdom/releases).
 
-```js
-require("can-vdom");
-
-window === global; // true
-
-document.getElementsByTagName("body"); // [HTMLBodyElement]
-```
-
-
-
-
-### <code>Object</code>
-
-
-### <code>__can-vdom/make-window/make-window__ function</code>
-
-Exports a function that window called, returns an object that looks like a `window`.
-
-
-#### <code>makeWindow()</code>
-
-
-Creates a document and places it, along with other common browser globals, on a new object and then returns that object.
-
-
-- __returns__ <code>{[window](#window-object)}</code>:
-  An object with common browser globals.
-  
-
-#### <code>makeWindow(global)</code>
-
-
-Creates a document and places it, along with other common browser globals, on the `global` object.
-
-```js
-var makeWindow = require("can-vdom/make-window/make-window");
-
-var window = makeWindow({});
-```
-
-
-1. __global__ <code>{[window](#window-object)}</code>:
-  An object that represents the environment's global.
-
-### <code>__can-vdom/make-document/make-document__ function</code>
-
-Exports a function that when called, returns a dom-light document object.
-
-
-#### <code>makeDocument()</code>
-
-
-Creates a new simple document using [can-simple-dom]. Provides light-weight document needs, mostly for server-side rendering.
-
-
-- __returns__ <code>{can-simple-dom/document/document}</code>:
-  A can-simple-dom document.
-  
-  
-### window `{Object}`
-
-
-An object representing a fake `window` object.
-
-
-
-#### <code>Object</code>
-
-- __document__ <code>{can-simple-dom/document/document}</code>:
-  A browser document
-  
-- __window__ <code>{Object}</code>:
-  The window itself.
-  
-- __self__ <code>{Object}</code>:
-  The `self` object is an alias for `window`.
-  
-- __addEventListener__ <code>{function}</code>:
-  A stub for `window.addEventListener`, does not actually set up events unless overridden some place else.
-  
-- __removeEventListener__ <code>{function}</code>:
-  A stub for `window.removeEventListener`.
-  
-- __navigator__ <code>{Object}</code>:
-  
-  
-- __location__ <code>{Object}</code>:
-  
-  
-- __history__ <code>{Object}</code>:
-  
-  
 ## Contributing
 
-### Making a Build
+The [contribution guide](https://github.com/canjs/can-vdom/blob/master/CONTRIBUTING.md) has information on getting help, reporting bugs, developing locally, and more.
 
-To make a build of the distributables into `dist/` in the cloned repository run
+## License
 
-```
-npm install
-node build
-```
+[MIT](https://github.com/canjs/can-vdom/blob/master/LICENSE.md)
 
-### Running the tests
-
-Tests can run in the browser by opening a webserver and visiting the `test.html` page.
-Automated tests that run the tests from the command line in Firefox can be run with
-
-```
-npm test
-```
