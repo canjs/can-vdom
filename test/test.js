@@ -29,7 +29,8 @@ if(isNode) {
 				"navigator",
 				"location",
 				"history",
-				"self"
+				"self",
+				"Node"
 			].forEach(assertExists);
 
 			function assertExists(prop){
@@ -40,6 +41,11 @@ if(isNode) {
 		it("contains normal globals like setTimeout", function(){
 			assert.equal(typeof window.setTimeout, "function", "setTimeout included");
 			assert.equal(typeof window.Math, "object", "Math included");
+		});
+
+		it("Node exposes the nodeType constants", function(){
+			assert.equal(window.Node.ELEMENT_NODE, 1, "has the element nodeType");
+			assert.equal(window.Node.TEXT_NODE, 3, "has the text nodeType");
 		});
 	});
 }
