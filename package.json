@@ -54,7 +54,7 @@
     "can-view-parser": "^3.4.0"
   },
   "devDependencies": {
-    "bit-docs": "0.0.7",
+    "bit-docs": "0.0.8-2",
     "chai": "^3.4.1",
     "done-serve": "^1.2.0",
     "donejs-cli": "^1.0.1",
