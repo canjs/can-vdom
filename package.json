@@ -19,14 +19,15 @@
     "testee": "testee test/test.html --browsers firefox",
     "test:node": "mocha test/test.js",
     "test:browser": "testee test/test.html --browsers firefox --reporter Spec",
-    "test": "npm run test:node && npm run test:browser",
+    "test": "npm run detect-cycle && npm run test:node && npm run test:browser",
     "jshint": "jshint ./*.js --config",
     "release:pre": "npm version prerelease && npm publish --tag=pre",
     "release:patch": "npm version patch && npm publish",
     "release:minor": "npm version minor && npm publish",
     "release:major": "npm version major && npm publish",
     "build": "node build.js",
-    "develop": "done-serve --static --develop --port 8080"
+    "develop": "done-serve --static --develop --port 8080",
+    "detect-cycle": "detect-cyclic-packages"
   },
   "main": "can-vdom.js",
   "keywords": [
@@ -58,6 +59,7 @@
   "devDependencies": {
     "bit-docs": "0.0.7",
     "chai": "^3.4.1",
+    "detect-cyclic-packages": "^1.0.0",
     "done-serve": "^1.2.0",
     "donejs-cli": "^1.0.1",
     "generator-donejs": "^1.0.5",
