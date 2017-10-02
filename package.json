@@ -53,7 +53,6 @@
     "can-assign": "^1.0.0",
     "can-globals": "^0.2.2",
     "can-simple-dom": "^1.1.0",
-    "can-util": "^3.9.0",
     "can-view-parser": "^3.4.0"
   },
   "devDependencies": {

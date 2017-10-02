@@ -2,7 +2,21 @@ var assert = require("assert");
 var isNode = typeof process !== "undefined" && {}.toString.call(process) === "[object process]";
 var makeDocument = require("../make-document/make-document");
 
-var childNodes = require("can-util/dom/child-nodes/child-nodes");
+// Copied from can-util to avoid circular dependency in testing.
+var childNodes = function childNodes(node) {
+	var childNodes = node.childNodes;
+	if ("length" in childNodes) {
+		return childNodes;
+	} else {
+		var cur = node.firstChild;
+		var nodes = [];
+		while (cur) {
+			nodes.push(cur);
+			cur = cur.nextSibling;
+		}
+		return nodes;
+	}
+};
 
 if(!isNode) {
 	require("steal-mocha");
