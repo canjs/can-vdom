@@ -53,11 +53,11 @@
     "can-assign": "^1.0.0",
     "can-globals": "^0.2.2",
     "can-simple-dom": "^1.1.0",
-    "can-util": "^3.9.0",
     "can-view-parser": "^3.4.0"
   },
   "devDependencies": {
     "bit-docs": "0.0.7",
+    "can-util": "^3.9.0",
     "chai": "^3.4.1",
     "detect-cyclic-packages": "^1.1.0",
     "done-serve": "^1.2.0",
