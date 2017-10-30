@@ -1,5 +1,6 @@
 @module {undefined} can-vdom
-@parent can-ecosystem
+@parent can-polyfills
+@collection can-ecosystem
 @group can-vdom.modules modules
 @group can-vdom.types types
 @package ./package.json
