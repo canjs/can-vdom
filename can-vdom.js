@@ -1,8 +1,7 @@
-var assign = require("can-util/js/assign/assign");
+var assign = require("can-assign");
 var makeWindow = require("./make-window/make-window");
 
-var GLOBAL = require("can-util/js/global/global");
-var DOCUMENT = require("can-util/dom/document/document");
+var GLOBAL = require("can-globals/global/global");
 
 var global = GLOBAL();
 assign(global, makeWindow(global));

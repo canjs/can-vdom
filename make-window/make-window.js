@@ -66,5 +66,8 @@ module.exports = function(global){
 		pushState: noop,
 		replaceState: noop
 	};
+	global.getComputedStyle = function (node) {
+		return node.style;
+	};
 	return global;
 };
