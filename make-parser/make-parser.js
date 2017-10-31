@@ -1,5 +1,6 @@
 /**
  * @module {function} can-vdom/make-parser/
+ * @hide
  *
  * Returns a function that can generate a HTML->TOKENs parser
  * given a document.
