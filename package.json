@@ -1,6 +1,6 @@
 {
   "name": "can-vdom",
-  "version": "3.2.5",
+  "version": "4.0.0-pre.0",
   "description": "A browser-lite environment for nodejs",
   "homepage": "http://canjs.com",
   "repository": {
@@ -51,9 +51,9 @@
   },
   "dependencies": {
     "can-assign": "^1.0.0",
-    "can-globals": "<2.0.0",
+    "can-globals": "^1.0.0",
     "can-simple-dom": "^1.1.0",
-    "can-view-parser": "^3.5.1"
+    "can-view-parser": "^4.0.0"
   },
   "devDependencies": {
     "bit-docs": "0.0.7",
