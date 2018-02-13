@@ -13,7 +13,7 @@ environment to have the limited subset of browser environment behavior and
 functionality needed to support CanJS templates and other behavior without
 a native DOM.
 
-```javascript
+```js
 require("can-vdom");
 
 window === global; // true
@@ -36,7 +36,7 @@ document.getElementsByTagName("body"); // [HTMLBodyElement]
 
 Importing `can-vdom` will shim a browser-like environment into Node's globals. Use this approach to run code that expects a global `window` and/or `document` object.
 
-```javascript
+```js
 require("can-vdom");
 
 typeof window; // "object"
@@ -50,7 +50,7 @@ document.getElementById("foo"); // undefined
 
 If you want to prevent setting globals you can load `can-vdom/make-window/make-window` directly:
 
-```javascript
+```js
 import makeWindow from "can-vdom/make-window/make-window";
 
 const myWindow = makeWindow(global);
