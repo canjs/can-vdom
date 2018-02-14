@@ -14,11 +14,11 @@ functionality needed to support CanJS templates and other behavior without
 a native DOM.
 
 ```js
-require("can-vdom");
+require( "can-vdom" );
 
 window === global; // true
 
-document.getElementsByTagName("body"); // [HTMLBodyElement]
+document.getElementsByTagName( "body" ); // [HTMLBodyElement]
 ```
 
 `can-vdom` decorates the environment `global` to include:
@@ -37,13 +37,13 @@ document.getElementsByTagName("body"); // [HTMLBodyElement]
 Importing `can-vdom` will shim a browser-like environment into Node's globals. Use this approach to run code that expects a global `window` and/or `document` object.
 
 ```js
-require("can-vdom");
+require( "can-vdom" );
 
 typeof window; // "object"
 
 typeof window.addEventListener; // "function"
 
-document.getElementById("foo"); // undefined
+document.getElementById( "foo" ); // undefined
 ```
 
 ## Loading as a module
@@ -53,5 +53,5 @@ If you want to prevent setting globals you can load `can-vdom/make-window/make-w
 ```js
 import makeWindow from "can-vdom/make-window/make-window";
 
-const myWindow = makeWindow(global);
+const myWindow = makeWindow( global );
 ```
