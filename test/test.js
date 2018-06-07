@@ -1,6 +1,7 @@
 var assert = require("assert");
 var isNode = typeof process !== "undefined" && {}.toString.call(process) === "[object process]";
 var makeDocument = require("../make-document/make-document");
+var devHelpers = require("can-test-helpers/lib/dev");
 
 var childNodes = require("can-util/dom/child-nodes/child-nodes");
 
@@ -51,6 +52,15 @@ if(isNode) {
 		it("Node exposes the nodeType constants", function(){
 			assert.equal(window.Node.ELEMENT_NODE, 1, "has the element nodeType");
 			assert.equal(window.Node.TEXT_NODE, 3, "has the text nodeType");
+		});
+
+		it("Warns when using non-supported fields", function(){
+			var undo = devHelpers.willWarn(/not supported/);
+
+			// Access FormData
+			window.FormData;
+
+			assert.equal(undo(), 1, "Warned one time");
 		});
 	});
 }
