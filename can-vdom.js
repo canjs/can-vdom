@@ -1,3 +1,4 @@
+"use strict";
 var assign = require("can-assign");
 var makeWindow = require("./make-window/make-window");
 
