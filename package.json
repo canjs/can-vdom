@@ -57,7 +57,7 @@
     "can-view-parser": "^4.0.0"
   },
   "devDependencies": {
-    "bit-docs": "0.0.7",
+    "bit-docs": "0.0.11",
     "can-test-helpers": "^1.1.2",
     "can-util": "^3.9.0",
     "chai": "^4.1.2",
