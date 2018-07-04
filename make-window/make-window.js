@@ -1,3 +1,4 @@
+"use strict";
 /**
  * @module {function} can-vdom/make-window/make-window ./make-window/make-window
  * @parent can-vdom.modules

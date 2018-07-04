@@ -1,3 +1,4 @@
+"use strict";
 /**
  * @module {function} can-vdom/make-parser/
  * @hide
