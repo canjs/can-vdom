@@ -54,6 +54,10 @@ if(isNode) {
 			assert.equal(window.Node.TEXT_NODE, 3, "has the text nodeType");
 		});
 
+		it("Element exposed on the window", function(){
+			assert.ok(window.Element, "Element is on the window");
+		});
+
 		it("Warns when using non-supported fields", function(){
 			var undo = devHelpers.willWarn(/not supported/);
 
