@@ -58,6 +58,10 @@ if(isNode) {
 			assert.ok(window.Element, "Element is on the window");
 		});
 
+		it("The defaultView is the window", function(){
+			assert.equal(window.document.defaultView, window, "The window is the defaultView");
+		});
+
 		it("Warns when using non-supported fields", function(){
 			var undo = devHelpers.willWarn(/not supported/);
 
