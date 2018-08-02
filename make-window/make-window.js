@@ -60,7 +60,7 @@ function warnOnAccess(global, property) {
 module.exports = function(global){
 	global = global || {};
 	global.document = makeDocument();
-	global.window = global.self = global;
+	global.window = global.self = global.document.defaultView = global;
 	global.addEventListener = function(){};
 	global.removeEventListener = function(){};
 	global.Node = simpleDOM.Node;
