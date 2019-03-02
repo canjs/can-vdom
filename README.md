@@ -5,8 +5,6 @@
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/canjs/can-vdom/blob/master/LICENSE.md)
 [![npm version](https://badge.fury.io/js/can-vdom.svg)](https://www.npmjs.com/package/can-vdom)
 [![Travis build status](https://travis-ci.org/canjs/can-vdom.svg?branch=master)](https://travis-ci.org/canjs/can-vdom)
-[![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/canjs/can-vdom?branch=master&svg=true)](https://ci.appveyor.com/project/matthewp/can-vdom)
-[![Coverage status](https://coveralls.io/repos/github/canjs/can-vdom/badge.svg?branch=master)](https://coveralls.io/github/canjs/can-vdom?branch=master)
 [![Greenkeeper badge](https://badges.greenkeeper.io/canjs/can-vdom.svg)](https://greenkeeper.io/)
 
 A browser-lite environment for nodejs
