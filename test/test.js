@@ -3,7 +3,7 @@ var isNode = typeof process !== "undefined" && {}.toString.call(process) === "[o
 var makeDocument = require("../make-document/make-document");
 var devHelpers = require("can-test-helpers/lib/dev");
 
-var childNodes = require("can-util/dom/child-nodes/child-nodes");
+var childNodes = require("can-child-nodes");
 
 if(!isNode) {
 	require("steal-mocha");
