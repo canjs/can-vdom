@@ -65,6 +65,7 @@ module.exports = function(global){
 	global.removeEventListener = function(){};
 	global.Node = simpleDOM.Node;
 	global.Element = simpleDOM.Element;
+	global.HTMLElement = simpleDOM.HTMLElement;
 	global.navigator = {
 		userAgent: "",
 		platform: "",
