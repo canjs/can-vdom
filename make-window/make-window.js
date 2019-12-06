@@ -66,6 +66,7 @@ module.exports = function(global){
 	global.Node = simpleDOM.Node;
 	global.Element = simpleDOM.Element;
 	global.HTMLElement = simpleDOM.HTMLElement;
+	global.customElements = simpleDOM.customElements;
 	global.navigator = {
 		userAgent: "",
 		platform: "",
