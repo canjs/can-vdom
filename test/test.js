@@ -58,6 +58,14 @@ if(isNode) {
 			assert.ok(window.Element, "Element is on the window");
 		});
 
+		it("HTMLElement exposed on the window", function(){
+			assert.ok(window.HTMLElement, "HTMLElement is on the window");
+		});
+
+		it("customElements exposed on the window", function(){
+			assert.ok(window.customElements, "customElements is on the window");
+		});
+
 		it("The defaultView is the window", function(){
 			assert.equal(window.document.defaultView, window, "The window is the defaultView");
 		});
